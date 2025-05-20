@@ -117,7 +117,7 @@ def test_feladat_16(html_soup):
 
 # 17. Minden latvany tartalmaz h3 és kép
 def test_feladat_17(html_soup):
-    latvanyok = html_soup.find("div", _class="latvany")
+    latvanyok = html_soup.find_all("div", _class="latvany")
     assert latvanyok is not None
     for d in latvanyok:
         assert d.find("h3") is not None and d.find("img") is not None

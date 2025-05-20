@@ -31,7 +31,7 @@
 17. Minden **latvany** div tartalmazzon egy **hármas szintű fejezetcímet** és egy **képet** *(A képek bármely sorrendben lehetnek.)*!
 18. A **latvany** div-ek legyenek egymás mellett elrendezve **flexbox** segítségével, egyenletesen elosztva!
 19. A **latvany** div-ek szövegei legyenek **középre igazítva**!
-20. A **latvany** címsorok (**fejezet3**) színe legyen **#006600**!
+20. A **latvany** címsorok (**h3**) színe legyen **#006600**!
 21. A `latvanyok` szakasz után jelenjen meg egy újabb **hr**!
 22. Hozz létre egy új **div-et** `erdekessegek` osztállyal!
 23. Ebben a szakaszban legyen egy **kettes szintű fejezetcím** *(Szövege: Érdekességek)* és egy **rendezetlen lista**!
