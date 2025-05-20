@@ -3,6 +3,10 @@
 ### Minden módosítást a *style.css* fájlban végezz el!
 ### A szövegeket megtalálod a *szoveg.txt* fájlban!
 
+### A feladat elkezdése előtt futtasd le terminálban a
+    pip install pytest bs4 cssutils
+### parancsot.
+### A parancs lefuttatása nélkül nem fog működni a kiértékelés.
 ---
 
 ## 1 pontos feladatok (10 db)
