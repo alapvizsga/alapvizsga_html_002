@@ -94,7 +94,7 @@ def test_feladat_12(html_soup):
 
 # 13. bekezdes dőlt
 def test_feladat_13(css_rules):
-    styles = get_style_for_selector(css_rules, "div.bemutato p")
+    styles = get_style_for_selector(css_rules, ".bemutato > p")
     assert styles.get("font-style") == "italic"
 
 # 14. hr a bemutato után
