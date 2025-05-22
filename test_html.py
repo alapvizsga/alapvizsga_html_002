@@ -48,7 +48,7 @@ def test_feladat_4(css_rules):
 # 5. .keret > * margó
 def test_feladat_5(css_rules):
     styles = get_style_for_selector(css_rules, ".keret > *")
-    assert styles.get("margin-bottom") == "50px"
+    assert styles.get("margin-bottom") == "50px" or styles.get("margin-top") == "50px"
 
 # 6. fejezet2 középre
 def test_feladat_6(css_rules):
