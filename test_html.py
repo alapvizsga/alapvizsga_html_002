@@ -86,16 +86,25 @@ def test_feladat_11(html_soup):
     h1 = html_soup.find("h1")
     assert h1 is not None and "Iskolaudvar" in h1.text
 
+def test_feladat_11_2(html_soup):
+    test_feladat_11(html_soup)
+
 # 12. bemutato szakasz felépítése
 def test_feladat_12(html_soup):
     szakasz = html_soup.find("div", class_="bemutato")
     assert szakasz is not None
     assert szakasz.find("h2") and szakasz.find("p")
 
+def test_feladat_12_2(html_soup):
+    test_feladat_12(html_soup)
+
 # 13. bekezdes dőlt
 def test_feladat_13(css_rules):
     styles = get_style_for_selector(css_rules, ".bemutato > p")
     assert styles.get("font-style") == "italic"
+
+def test_feladat_13_2(css_rules):
+    test_feladat_13(css_rules)
 
 # 14. hr a bemutato után
 def test_feladat_14(html_soup):
@@ -106,22 +115,34 @@ def test_feladat_14(html_soup):
 
     assert hr.name == "hr"
 
+def test_feladat_14_2(html_soup):
+    test_feladat_14(html_soup)
+
 # 15. latvanyok szakasz
 def test_feladat_15(html_soup):
     assert html_soup.find("div", class_="latvanyok") is not None
+
+def test_feladat_15_2(html_soup):
+    test_feladat_15(html_soup)
 
 # 16. Három div latvany osztállyal
 def test_feladat_16(html_soup):
     divs = html_soup.select("div.latvanyok > div.latvany")
     assert len(divs) == 3
 
+def test_feladat_16_2(html_soup):
+    test_feladat_16(html_soup)
+
 # 17. Minden latvany tartalmaz h3 és kép
 def test_feladat_17(html_soup):
     latvanyok = html_soup.find_all("div", _class="latvany")
-    assert latvanyok is not None
+    assert latvanyok is not None and len(latvanyok) != 0
     for d in latvanyok:
         assert d.find("h3") is not None and d.find("img") is not None
-        assert d.find("img").attrs["src"] is not "" 
+        assert d.find("img").attrs["src"] is not ""
+
+def test_feladat_17_2(html_soup):
+    test_feladat_17(html_soup) 
 
 # 18. latvanyok flexbox elrendezés
 def test_feladat_18(css_rules):
@@ -129,15 +150,24 @@ def test_feladat_18(css_rules):
     assert styles.get("display") == "flex"
     assert styles.get("justify-content") == "space-between"
 
+def test_feladat_18_2(css_rules):
+    test_feladat_18(css_rules)
+
 # 19. latvany szöveg középre
 def test_feladat_19(css_rules):
     styles = get_style_for_selector(css_rules, ".latvany")
     assert styles.get("text-align") == "center"
 
+def test_feladat_19_2(css_rules):
+    test_feladat_19(css_rules)
+
 # 20. fejezet3 szín
 def test_feladat_20(css_rules):
     styles = get_style_for_selector(css_rules, "h3")
     assert styles.get("color") == "#060"
+
+def test_feladat_20_2(css_rules):
+    test_feladat_20(css_rules)
 
 # 21. újabb hr latvanyok után
 def test_feladat_21(html_soup):
@@ -145,14 +175,23 @@ def test_feladat_21(html_soup):
     hr = szakasz.find_next_sibling("hr")
     assert hr is not None
 
+def test_feladat_21_2(html_soup):
+    test_feladat_21(html_soup)
+
 # 22. erdekessegek szakasz
 def test_feladat_22(html_soup):
     assert html_soup.find("div", class_="erdekessegek") is not None
+
+def test_feladat_22_2(html_soup):
+    test_feladat_22(html_soup)
 
 # 23. h2 és ul benne
 def test_feladat_23(html_soup):
     szakasz = html_soup.find("div", class_="erdekessegek")
     assert szakasz.find("h2") is not None and szakasz.find("ul") is not None
+
+def test_feladat_23_2(html_soup):
+    test_feladat_23(html_soup)
 
 # 24. 4 listaelem
 def test_feladat_24(html_soup):
@@ -164,8 +203,14 @@ def test_feladat_24(html_soup):
     lista = html_soup.find("ul")
     assert len(lista.find_all("li")) == 4
 
+def test_feladat_24_2(html_soup):
+    test_feladat_24(html_soup)
+
 # 25. Listaelem betűméret és margó
 def test_feladat_25(css_rules):
     styles = get_style_for_selector(css_rules, "li")
     assert styles.get("font-size") == "18px"
     assert styles.get("margin-bottom") == "10px"
+
+def test_feladat_25_2(css_rules):
+    test_feladat_25(css_rules)
