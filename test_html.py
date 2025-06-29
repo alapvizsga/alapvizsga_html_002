@@ -135,8 +135,9 @@ def test_feladat_16_2(html_soup):
 
 # 17. Minden latvany tartalmaz h3 és kép
 def test_feladat_17(html_soup):
-    latvanyok = html_soup.find_all("div", _class="latvany")
-    assert latvanyok is not None and len(latvanyok) != 0
+    latvanyok = html_soup.find_all("div", class_="latvany")
+    assert len(latvanyok) == 3
+
     for d in latvanyok:
         assert d.find("h3") is not None and d.find("img") is not None
         assert d.find("img").attrs["src"] is not ""
@@ -146,16 +147,16 @@ def test_feladat_17_2(html_soup):
 
 # 18. latvanyok flexbox elrendezés
 def test_feladat_18(css_rules):
-    styles = get_style_for_selector(css_rules, "div.latvanyok")
+    styles = get_style_for_selector(css_rules, ".latvanyok")
     assert styles.get("display") == "flex"
-    assert styles.get("justify-content") == "space-between"
+    assert styles.get("justify-content") == "space-evenly"
 
 def test_feladat_18_2(css_rules):
     test_feladat_18(css_rules)
 
 # 19. latvany szöveg középre
 def test_feladat_19(css_rules):
-    styles = get_style_for_selector(css_rules, ".latvany")
+    styles = get_style_for_selector(css_rules, ".latvany > h3")
     assert styles.get("text-align") == "center"
 
 def test_feladat_19_2(css_rules):
@@ -163,7 +164,7 @@ def test_feladat_19_2(css_rules):
 
 # 20. fejezet3 szín
 def test_feladat_20(css_rules):
-    styles = get_style_for_selector(css_rules, "h3")
+    styles = get_style_for_selector(css_rules, ".latvany > h3")
     assert styles.get("color") == "#060"
 
 def test_feladat_20_2(css_rules):
@@ -208,9 +209,9 @@ def test_feladat_24_2(html_soup):
 
 # 25. Listaelem betűméret és margó
 def test_feladat_25(css_rules):
-    styles = get_style_for_selector(css_rules, "li")
+    styles = get_style_for_selector(css_rules, ".erdekessegek li")
     assert styles.get("font-size") == "18px"
-    assert styles.get("margin-bottom") == "10px"
+    assert styles.get("margin-bottom") == "10px" or styles.get("margin-top") == "10px"
 
 def test_feladat_25_2(css_rules):
     test_feladat_25(css_rules)

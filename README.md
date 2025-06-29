@@ -32,13 +32,18 @@
 14. A **bemutato** div után jelenjen meg egy **hr** elválasztó elem!
 15. Hozz létre egy új div-et `latvanyok` osztállyal!
 16. A `latvanyok` **div** három darab **div** elemet tartalmazzon, mindegyik osztálya **latvany** legyen!
-17. Minden **latvany** div tartalmazzon egy **hármas szintű fejezetcímet** és egy **képet** *(A képek bármely sorrendben lehetnek.)*!
+17. Minden **latvany** div tartalmazzon egy **hármas szintű fejezetcímet** (Szövegeik: *Virágágyás, Padok, Sportpálya*) és egy **képet** *(A képek bármely sorrendben lehetnek.)*!
 18. A **latvany** div-ek legyenek egymás mellett elrendezve **flexbox** segítségével, egyenletesen elosztva!
 19. A **latvany** div-ek szövegei legyenek **középre igazítva**!
-20. A **latvany** címsorok (**h3**) színe legyen **#006600**!
+20. A **latvany** címsorok (**h3**) színe legyen **#060**!
 21. A `latvanyok` szakasz után jelenjen meg egy újabb **hr**!
 22. Hozz létre egy új **div-et** `erdekessegek` osztállyal!
 23. Ebben a szakaszban legyen egy **kettes szintű fejezetcím** *(Szövege: Érdekességek)* és egy **rendezetlen lista**!
+    (Szövegük:
+    - *A virágágyást a diákok gondozzák*
+    - *A padokat újrafestették tavasszal*
+    - *Van egy madáretető is az udvaron*
+    - *A sportpályát diákversenyekhez használják*)
 24. A **rendezetlen lista** tartalmazzon **4 darab listaelemet**!
 25. A lista szövegének betűmérete legyen **18px**, a sorok között pedig legyen **10px** függőleges térköz!
 
