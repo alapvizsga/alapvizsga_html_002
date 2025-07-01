@@ -1,6 +1,7 @@
 # Iskolaudvar – HTML + CSS feladatsor
 
 ### Minden módosítást a *style.css* fájlban végezz el!
+### A Github Classroom-ba a *style.css* és *index.html* fájlokat kell visszatölteni.
 ### A szövegeket megtalálod a *szoveg.txt* fájlban!
 
 ### A feladat elkezdése előtt futtasd le terminálban a
