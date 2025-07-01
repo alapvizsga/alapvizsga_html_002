@@ -8,6 +8,12 @@
     pip install pytest bs4 cssutils
 ### parancsot.
 ### A parancs lefuttatása nélkül nem fog működni a kiértékelés.
+### A kiértékelés használata (a feladat mappájába navigálás után):
+``` 
+pip install pytest, vagy
+python -m pip install pytest, vagy
+python3 -m pip install pytest
+```
 ---
 
 ## 1 pontos feladatok (10 db)
@@ -29,7 +35,7 @@
 
 11. A főcímként szereplő **egyes szintű fejezetcím** szövege legyen: **Iskolaudvar**.
 12. A **bemutato** osztályú div tartalmazzon egy **kettes szintű fejezetcímet** *(Szövege: Bemutatkozás)* és egy **bekezdést** *(Szövege: Az iskolaudvarunk kellemes, zöld környezete ideális a szünetek eltöltésére.)*!
-13. Az előbb említett **bekezdés** szövege legyen dőlt stílusú!
+13. A **.bemutato** div **bekezdés** szövege legyen dőlt stílusú!
 14. A **bemutato** div után jelenjen meg egy **hr** elválasztó elem!
 15. Hozz létre egy új div-et `latvanyok` osztállyal!
 16. A `latvanyok` **div** három darab **div** elemet tartalmazzon, mindegyik osztálya **latvany** legyen!
